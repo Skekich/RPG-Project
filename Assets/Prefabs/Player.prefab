@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!136 &885317679
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8725546603704236904}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 1.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &-723367448239370273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,20 +40,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80e5b756524a8d438bff4ab9c4f5e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &885317679
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725546603704236904}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 1.7
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &6570437223779497558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51,6 +51,11 @@ PrefabInstance:
         type: 3}
       propertyPath: healthPoint
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466213034109521156, guid: ef140848699125945bd005f3ea24e726,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2466213034109521210, guid: ef140848699125945bd005f3ea24e726,
         type: 3}

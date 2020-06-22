@@ -35,7 +35,6 @@ namespace RPG.Control
             mover = GetComponent<Mover>();
             actionSceduler = GetComponent<ActionSceduler>();
             guardPosition = transform.position;
-            print(playerSet);
         }
 
         private void Update()
