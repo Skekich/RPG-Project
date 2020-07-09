@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.AI;
 using RPG.Core;
+using RPG.Saving;
 
 namespace RPG.Movement
 {
-    public class Mover : MonoBehaviour, IAction
+    public class Mover : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField] private float maxSpeed = 6f;
     
@@ -16,12 +18,16 @@ namespace RPG.Movement
 
         private static readonly int ForwardSpeed = Animator.StringToHash("ForwardSpeed");
 
-        private void Start()
+        private void Awake()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             animatorAgent = GetComponent<Animator>();
             actionSceduler = GetComponent<ActionSceduler>();
             health = GetComponent<Health>();
+        }
+
+        private void Start()
+        {
             destination = navMeshAgent.destination;
         }
 
@@ -56,6 +62,20 @@ namespace RPG.Movement
             var localVelocity = transform.InverseTransformDirection(velocity);
             var speed = localVelocity.z;
             animatorAgent.SetFloat(ForwardSpeed, speed);
+        }
+
+        public object CaptureState()
+        {
+            return new SerializableVector3(transform.position);
+        }
+
+        public void RestoreState(object state)
+        {
+            var position = (SerializableVector3)state;
+            navMeshAgent.enabled = false;
+            transform.position = position.ToVector();
+            navMeshAgent.enabled = true;
+            actionSceduler.CancelCurrentAction();
         }
     }
 }

@@ -52,6 +52,11 @@ PrefabInstance:
       propertyPath: healthPoint
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: -2561388451311503468, guid: ef140848699125945bd005f3ea24e726,
+        type: 3}
+      propertyPath: uniqueIdentifier
+      value: player
+      objectReference: {fileID: 0}
     - target: {fileID: 2466213034109521156, guid: ef140848699125945bd005f3ea24e726,
         type: 3}
       propertyPath: m_Enabled
@@ -122,6 +127,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3850184223219636737, guid: ef140848699125945bd005f3ea24e726,
+        type: 3}
+      propertyPath: uniqueIdentifier
+      value: player
+      objectReference: {fileID: 0}
     - target: {fileID: 4087337597084292294, guid: ef140848699125945bd005f3ea24e726,
         type: 3}
       propertyPath: maxSpeed
@@ -137,7 +147,8 @@ PrefabInstance:
       propertyPath: weaponDamage
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3850184223219636737, guid: ef140848699125945bd005f3ea24e726, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ef140848699125945bd005f3ea24e726, type: 3}
 --- !u!1 &8725546603704236904 stripped
 GameObject:
